@@ -1,0 +1,213 @@
+/* Keyframe for staggered entry animation (mobile) */
+@keyframes cardEntry {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Keyframe for slide from right (desktop) */
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Keyframe for slide from left (desktop) */
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Keyframe for arrow bounce/slide */
+@keyframes arrowSlide {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+}
+
+.job-card {
+  border: none;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  border-radius: 30px;
+  overflow: hidden;
+  animation: cardEntry 0.6s ease-out forwards;
+  opacity: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card hover lift */
+.job-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.15), 0 10px 10px -5px rgb(0 0 0 / 0.1);
+}
+
+/* Job card button styles */
+.job-card-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Button scale on hover */
+.job-card-button:hover {
+  transform: scale(1.05);
+}
+
+/* Button arrow styles */
+.button-arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+/* Arrow bounce/slide on button hover */
+.job-card-button:hover .button-arrow {
+  animation: arrowSlide 0.6s ease-in-out infinite;
+}
+
+/* Carousel container for desktop */
+.carousel-container {
+  animation-duration: 0.6s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+
+/* Desktop slide animations */
+@media (min-width: 768px) {
+  .carousel-slide-right {
+    animation-name: slideFromRight;
+  }
+
+  .carousel-slide-left {
+    animation-name: slideFromLeft;
+  }
+
+  /* Override card entry animation on desktop */
+  .carousel-container .job-card {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* Mobile stacked carousel styles */
+.mobile-carousel-container {
+  position: relative;
+  height: 450px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+  padding-top: 20px;
+  overflow: visible;
+}
+
+.mobile-card-wrapper {
+  position: absolute;
+  width: 75%;
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Adjust card width for larger mobile screens */
+@media (min-width: 480px) {
+  .mobile-card-wrapper {
+    width: 70%;
+    max-width: 400px;
+  }
+}
+
+/* Current card - center and front */
+.mobile-card-current {
+  z-index: 30;
+  transform: translateX(0) scale(1);
+  opacity: 1;
+}
+
+/* Previous card - stacked behind on left */
+.mobile-card-prev {
+  z-index: 10;
+  transform: translateX(-50%) scale(0.8);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Next card - stacked behind on right */
+.mobile-card-next {
+  z-index: 10;
+  transform: translateX(50%) scale(0.8);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Mobile slide animations */
+@keyframes mobileSlideFromLeft {
+  from {
+    transform: translateX(-50%) scale(0.8);
+    opacity: 0.5;
+    z-index: 10;
+  }
+  to {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    z-index: 30;
+  }
+}
+
+@keyframes mobileSlideFromRight {
+  from {
+    transform: translateX(50%) scale(0.8);
+    opacity: 0.5;
+    z-index: 10;
+  }
+  to {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    z-index: 30;
+  }
+}
+
+.mobile-card-current.slide-from-left {
+  animation: mobileSlideFromLeft 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.mobile-card-current.slide-from-right {
+  animation: mobileSlideFromRight 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Disable card hover effect on mobile carousel */
+.mobile-carousel-container .job-card {
+  animation: none;
+  opacity: 1;
+}
+
+.mobile-card-prev .job-card:hover,
+.mobile-card-next .job-card:hover {
+  transform: none;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.flex-center-gap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

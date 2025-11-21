@@ -1,0 +1,182 @@
+@import "tailwindcss";
+
+:root {
+  --foreground: #171717;
+  --red: #F99D76;
+  --yellow: #FCDF69;
+  --blue:#064EA4;
+  --lightblue:#D7E7FB;
+  --white: #FFFFFF;
+  --darkred: #451B09;
+}
+
+@theme inline {
+  --color-background: var(--white);
+  --color-foreground: var(--foreground);
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: var(--font-geist-mono);
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  background: var(--white);
+  color: var(--foreground);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Ant Design font family override */
+.ant-btn,
+.ant-input,
+.ant-dropdown,
+.ant-drawer,
+.ant-collapse,
+.ant-menu {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+.container-custom {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.btn-yellow {
+  background-color: var(--yellow);
+  border-color: var(--yellow);
+  color: var(--darkred);
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+.btn-yellow:hover,
+.ant-btn.btn-yellow:hover {
+  background-color: rgb(234 179 8) !important;
+  border-color: rgb(234 179 8) !important;
+  color: var(--darkred) !important;
+}
+
+.btn-red {
+  background-color: var(--red);
+  border-color: var(--red);
+  color: var(--darkred);
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+.btn-red:hover,
+.ant-btn.btn-red:hover {
+  background-color: #e08d6a !important;
+  border-color: #e08d6a !important;
+  color: var(--darkred) !important;
+}
+
+.btn-white {
+  width: 100%;
+  background-color: var(--white);
+  border-color: var(--white);
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+.btn-white:hover {
+  background-color: rgb(249 250 251);
+}
+
+.blue-text {
+  color: var(--blue);
+}
+
+.white-text {
+  color:white;
+}
+
+.xlarge-text{
+  font-size: 36px;
+}
+
+.large-text{
+  font-size: 20px;
+}
+
+.medium-text {
+  font-size: 16px;
+}
+
+.small-text{
+  font-size: 14px;
+}
+
+.xsmall-text {
+  font-size: 10px;
+}
+
+.red-bg {
+  background-color: var(--red);
+}
+
+.yellow-bg{
+  background-color: var(--yellow);;
+}
+
+.lightblue-bg {
+  background-color: var(--lightblue);
+}
+
+.blue-bg {
+  background-color: var(--blue);
+}
+
+@media (max-width: 1024px) {
+  .container-custom {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .large-text{
+    font-size: 16px;
+  }
+  .medium-text {
+    font-size: 14px;
+  }
+  .small-text{
+    font-size: 12px;
+  }
+  .btn-yellow, .btn-red {
+    padding: 6px 12px;
+    font-size: 12px;
+    height: auto;
+  }
+}
+
+
+
+@media (max-width: 640px) {
+  .container-custom {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .large-text{
+    font-size: 14px;
+  }
+  .small-text{
+    font-size: 10px;
+  }
+}
+
+
+
+@media (max-width: 375px) {
+  .large-text{
+    font-size: 12px;
+  }
+  .xsmall-text {
+    font-size: 8px;
+  }
+}

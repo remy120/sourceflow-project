@@ -1,0 +1,43 @@
+{
+  "header.companyName": "Software Recruitment co.",
+  "header.forCandidates": "For candidates",
+  "header.forClients": "For clients",
+  "header.sectors": "Sectors",
+  "header.resources": "Resources",
+  "header.uploadCV": "Upload CV",
+  "header.contactUs": "Contact us",
+
+  "hero.tagline": "Software Recruitment Specialists",
+  "hero.title": "Elevate your career",
+  "hero.searchPlaceholder": "Eg. networking",
+  "hero.searchButton": "Search jobs",
+
+  "workWith.title": "Who we work with",
+
+  "jobs.title": "Latest Jobs",
+  "jobs.viewMore": "View more jobs →",
+  "jobs.technology": "Python",
+  "jobs.position": "Software Engineer",
+  "jobs.location": "London",
+  "jobs.description": "Odio mi amet commodo convallis nunc. Tincidunt mauris eu egestas eget in aliquam.",
+  "jobs.viewButton": "View the job",
+  "jobs.postedOn": "Posted on: 29/02/2021",
+  "jobs.viewThisJob":"View this job",
+
+  "footer.explore": "Explore",
+  "footer.homepage": "Homepage",
+  "footer.forJobseekers": "For Jobseekers",
+  "footer.forClients": "For clients",
+  "footer.ourSectors": "Our sectors",
+  "footer.resources": "Resources",
+  "footer.contactUs": "Contact us",
+  "footer.sectors": "Sectors",
+  "footer.softwareEngineering": "Software engineering",
+  "footer.devOps": "DevOps",
+  "footer.cloud": "Cloud",
+  "footer.infrastructure": "Infrastructure",
+  "footer.testing": "Testing",
+  "footer.security": "Security",
+  "footer.services": "Services",
+  "footer.navItem": "Nav item"
+}

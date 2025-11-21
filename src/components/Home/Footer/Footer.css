@@ -1,0 +1,18 @@
+.footer-link:hover {
+  color: rgb(147 197 253);
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  color: rgb(147 197 253);
+}
+
+.footer-heading {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
